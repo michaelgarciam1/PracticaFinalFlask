@@ -6,36 +6,46 @@ from flask import Flask, flash, jsonify, redirect, render_template, request, ses
 # Configure application
 app = Flask(__name__)
 
-# Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-# Configure CS50 Library to use SQLite database
+# inicializamos la database
 db = SQL("sqlite:///birthdays.db")
-
 
 @app.route("/", methods=["GET", "POST"])
 def index():
 
     if request.method == "POST":
+        
+        # guardamos el nombre,mes y dia
         message = ""
-        name = request.form.get("name")
-        month = request.form.get("month")
-        day = request.form.get("day")
-        if not name:
-            message = "Missing name"
-        elif not month:
-            message = "Missing month"
-        elif not day:
-            message = "Missing day"
+        nombre = request.form.get("name")
+        mes = request.form.get("month")
+        dia = request.form.get("day")
+
+        # Comprueba si se proporciona el nombre, el mes y el día
+        if not nombre:
+            message = "Falta el nombre"
+        elif not mes:
+            message = "Falta el mes"
+        elif not dia:
+            message = "Falta un dia"
         else:
+            # Inserta el nombre, mes y día en la base de datos
             db.execute(
                 "INSERT INTO birthdays (name, month, day) VALUES(?, ?,?)",
-                name,
-                month,
-                day,
+                nombre,
+                mes,
+                dia,
             )
+        
+        # Obtiene todas las filas de la tabla birthdays
         birthdays = db.execute("SELECT * FROM birthdays")
+
+        # Renderiza la plantilla "index.html" y pasa la variable message y birthdays a la plantilla
         return render_template("index.html", message=message, birthdays=birthdays)
     else:
+        # Si no se realizó una solicitud POST, obtiene todas las filas de la tabla birthdays
         birthdays = db.execute("SELECT * FROM birthdays")
+
+        # pY pasa la variable birthdays a la plantilla
         return render_template("index.html", birthdays=birthdays)
