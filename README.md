@@ -14,3 +14,23 @@
 5-Falta la libreria cs50:
 ![image](https://github.com/michaelgarciam1/PracticaFinalFlask/assets/114613053/d231377f-6971-434d-b121-93d6fe26bcdc)
 
+6-completamos el codigo correspondiente:
+![image](https://github.com/michaelgarciam1/PracticaFinalFlask/assets/114613053/ae6a4b7b-7c21-4227-81a2-4f797bea51a7)
+
+7-primero el metodo post:
+![image](https://github.com/michaelgarciam1/PracticaFinalFlask/assets/114613053/81fe4275-f7aa-454c-90d2-a47121b46825)
+
+8- el metodo get:
+  ![image](https://github.com/michaelgarciam1/PracticaFinalFlask/assets/114613053/9b388dd6-e04d-4622-9221-3ac5f4e95d3c)
+
+9- completamos el index.html:
+  ![image](https://github.com/michaelgarciam1/PracticaFinalFlask/assets/114613053/17a60a2c-1e3a-4da2-8aad-a06e8c04454b)
+10- el html completado:
+  ![image](https://github.com/michaelgarciam1/PracticaFinalFlask/assets/114613053/be919cce-6bdb-4dca-9b8e-12b8c479eadb)
+
+11-Para ejecutar la aplicacion web:
+  ![image](https://github.com/michaelgarciam1/PracticaFinalFlask/assets/114613053/02a4e4a2-5765-4e26-add7-8477f4994e59)
+
+12-la aplicacion funcionando:
+![image](https://github.com/michaelgarciam1/PracticaFinalFlask/assets/114613053/41ec7de4-e3cb-4e4c-816e-82a3fe8c8436)
+
